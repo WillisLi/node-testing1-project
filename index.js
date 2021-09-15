@@ -7,7 +7,7 @@
  * trimProperties({ name: '  jane  ' }) // returns a new object { name: 'jane' }
  */
 function trimProperties(obj) {
-  const copy = obj;
+  const copy = Object.assign({}, obj);
   for (const prop in copy) {
     copy[prop] = copy[prop].trim()
   }
@@ -176,7 +176,7 @@ class Car {
  */
 function isEvenNumberAsync(number) {
   return number % 2 === 0;
-}
+} 
 
 module.exports = {
   trimProperties,
